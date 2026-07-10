@@ -15,3 +15,5 @@ with open(csv_path, mode='r') as file:
         ec2.Instance(row['ID']).modify_attribute(
             DisableApiTermination={'Value': True}
     )
+        
+# Adding text to test state machine.
