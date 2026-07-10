@@ -1,4 +1,7 @@
 name: Zip repository and upload to S3
+runs:
+  using: 'node24'
+  main: 'main.js'
 
 on:
   push:
