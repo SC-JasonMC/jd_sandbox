@@ -49,4 +49,4 @@ jobs:
       - name: Upload metadata to S3
         run: |
           aws s3 cp metadata.json \
-          s3://tf-upload-499497677255-eu-west-2-an/${REPO_NAME}/${{ github.sha }}.json
+          s3://tf-upload-499497677255-eu-west-2-an/${REPO_NAME}/meta/${{ github.sha }}.json
