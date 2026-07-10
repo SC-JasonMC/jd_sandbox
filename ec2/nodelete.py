@@ -21,3 +21,5 @@ with open(csv_path, mode='r') as file:
 # Second attempt to trigger eventbridge.
 
 # Second attempt worked with no .zip filter. Adding that back in to see if I can get it working.
+
+# Removed trailing white space from EventBridge S3 bucket name filter.
