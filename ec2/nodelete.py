@@ -19,3 +19,5 @@ with open(csv_path, mode='r') as file:
 # Adding text to test state machine.
 
 # Second attempt to trigger eventbridge.
+
+# Second attempt worked with no .zip filter. Adding that back in to see if I can get it working.
