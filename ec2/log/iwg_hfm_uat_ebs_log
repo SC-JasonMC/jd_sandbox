@@ -1,0 +1,345 @@
+2026-07-15 16:34:50,194 botocore.credentials INFO Found credentials in shared credentials file: ~/.aws/credentials
+2026-07-15 16:34:50,897 botocore.credentials INFO Found credentials in shared credentials file: ~/.aws/credentials
+2026-07-15 16:34:53,762 root INFO 
+Volume Data: 
+[{'volume_id': 'vol-0957b168066466a97', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 1700, 'iops': 3000, 'throughput': 400, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-07a59ace84cf801b7', 'volume_name': 'REG10WEB09HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0032ad1b61641e8db', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0ab51a45b5ac55660', 'volume_name': 'REG10ESS01HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 559, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea1383f262e3d0ca', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0f03645d1afaca0ab', 'volume_name': 'REG10APP19HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 51, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ee87391f85885377', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0de1045c0747b5a39', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sde', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0afbe5a036295e515', 'volume_name': 'REG10APP19HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 101, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ee87391f85885377', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-012c5cb6d11edae22', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 8, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sdd', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0cbe0ede99b2e072a', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 75, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0feea028e3138870a', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 125, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-05c7ff6d6099cf507', 'volume_name': 'REG10WEB08HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0cd042d726bf0a38e', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-099e56ee17e05a2c5', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 200, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sdd', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-09d427abda139bc7c', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 75, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0e2870c83ef9262a0', 'volume_name': 'REG10ESS01HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 51, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea1383f262e3d0ca', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-04cf0f1abad91752d', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 10, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-094fd0fc635f84a80', 'volume_name': 'REG10APP19HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 101, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ee87391f85885377', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0225e8dcba4a6a016', 'volume_name': 'REG10WEB09HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0032ad1b61641e8db', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0daeab5e4d80fd2c3', 'volume_name': 'REG10ESS01HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 230, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea1383f262e3d0ca', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-034df25996c759873', 'volume_name': 'REG10WEB08HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0cd042d726bf0a38e', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0e8bdab3ac57ad2d6', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 1900, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdd', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-04632d22220164486', 'volume_name': 'REG10WEB09HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0032ad1b61641e8db', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-045fcbdc20d587ad8', 'volume_name': 'REG10WEB08HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0cd042d726bf0a38e', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-05ed2eb1a693650b2', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-08398856cf00d2aa7', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0bdf19649490f3b90', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 990, 'iops': 3050, 'throughput': 400, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-07d1711003f1076f5', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 200, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sde', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-02b9d2db251d852c1', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0ff4842f8e42e4d9d', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 270, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdf', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}] 
+2026-07-15 16:34:53,912 root INFO 
+Running instances:
+['i-080f4d2599e128f7c', 'i-0cd042d726bf0a38e', 'i-0ea1383f262e3d0ca', 'i-0ee87391f85885377', 'i-0e0dba94856924013', 'i-0ea6a5e2c951f1710', 'i-0032ad1b61641e8db'] 
+2026-07-15 16:34:53,913 root INFO 
+Migration plan:
+2026-07-15 16:34:53,913 root INFO vol-0957b168066466a97 on i-080f4d2599e128f7c as /dev/sdb
+2026-07-15 16:34:53,914 root INFO vol-07a59ace84cf801b7 on i-0032ad1b61641e8db as /dev/sdc
+2026-07-15 16:34:53,914 root INFO vol-0ab51a45b5ac55660 on i-0ea1383f262e3d0ca as /dev/sdb
+2026-07-15 16:34:53,914 root INFO vol-0f03645d1afaca0ab on i-0ee87391f85885377 as /dev/sdc
+2026-07-15 16:34:53,915 root INFO vol-0de1045c0747b5a39 on i-0ea6a5e2c951f1710 as /dev/sde
+2026-07-15 16:34:53,915 root INFO vol-0afbe5a036295e515 on i-0ee87391f85885377 as /dev/sdb
+2026-07-15 16:34:53,915 root INFO vol-012c5cb6d11edae22 on i-0ea6a5e2c951f1710 as /dev/sdd
+2026-07-15 16:34:53,916 root INFO vol-0cbe0ede99b2e072a on i-0ea6a5e2c951f1710 as /dev/sdb
+2026-07-15 16:34:53,916 root INFO vol-0feea028e3138870a on i-080f4d2599e128f7c as /dev/sda1
+2026-07-15 16:34:53,916 root INFO vol-05c7ff6d6099cf507 on i-0cd042d726bf0a38e as /dev/sdc
+2026-07-15 16:34:53,916 root INFO vol-099e56ee17e05a2c5 on i-0e0dba94856924013 as /dev/sdd
+2026-07-15 16:34:53,917 root INFO vol-09d427abda139bc7c on i-0e0dba94856924013 as /dev/sda1
+2026-07-15 16:34:53,917 root INFO vol-0e2870c83ef9262a0 on i-0ea1383f262e3d0ca as /dev/sda1
+2026-07-15 16:34:53,917 root INFO vol-04cf0f1abad91752d on i-0ea6a5e2c951f1710 as /dev/sdc
+2026-07-15 16:34:53,917 root INFO vol-094fd0fc635f84a80 on i-0ee87391f85885377 as /dev/sda1
+2026-07-15 16:34:53,918 root INFO vol-0225e8dcba4a6a016 on i-0032ad1b61641e8db as /dev/sda1
+2026-07-15 16:34:53,918 root INFO vol-0daeab5e4d80fd2c3 on i-0ea1383f262e3d0ca as /dev/sdc
+2026-07-15 16:34:53,918 root INFO vol-034df25996c759873 on i-0cd042d726bf0a38e as /dev/sda1
+2026-07-15 16:34:53,918 root INFO vol-0e8bdab3ac57ad2d6 on i-080f4d2599e128f7c as /dev/sdd
+2026-07-15 16:34:53,919 root INFO vol-04632d22220164486 on i-0032ad1b61641e8db as /dev/sdb
+2026-07-15 16:34:53,919 root INFO vol-045fcbdc20d587ad8 on i-0cd042d726bf0a38e as /dev/sdb
+2026-07-15 16:34:53,919 root INFO vol-05ed2eb1a693650b2 on i-0e0dba94856924013 as /dev/sdc
+2026-07-15 16:34:53,920 root INFO vol-08398856cf00d2aa7 on i-0ea6a5e2c951f1710 as /dev/sda1
+2026-07-15 16:34:53,920 root INFO vol-0bdf19649490f3b90 on i-080f4d2599e128f7c as /dev/sdc
+2026-07-15 16:34:53,920 root INFO vol-07d1711003f1076f5 on i-080f4d2599e128f7c as /dev/sde
+2026-07-15 16:34:53,921 root INFO vol-02b9d2db251d852c1 on i-0e0dba94856924013 as /dev/sdb
+2026-07-15 16:34:53,921 root INFO vol-0ff4842f8e42e4d9d on i-080f4d2599e128f7c as /dev/sdf
+2026-07-15 16:34:53,921 root INFO 
+Instances to stop: 
+['i-080f4d2599e128f7c', 'i-0cd042d726bf0a38e', 'i-0ea1383f262e3d0ca', 'i-0ee87391f85885377', 'i-0e0dba94856924013', 'i-0ea6a5e2c951f1710', 'i-0032ad1b61641e8db']
+2026-07-15 16:34:53,921 root INFO 
+Target KMS key: arn:aws:kms:eu-west-1:312844855060:key/7bad6a5d-ae37-4d5d-b1ab-b7581a7ae487
+2026-07-15 16:34:53,922 root INFO 
+7 instances targeted in the VPC vpc-0463c76b898aa20b1
+2026-07-15 16:34:53,922 root INFO 
+27 volumes require migration
+2026-07-15 16:34:53,922 root INFO 
+Dry run enabled. Not stopping instances or modifying volumes. 
+2026-07-15 16:37:08,561 botocore.credentials INFO Found credentials in shared credentials file: ~/.aws/credentials
+2026-07-15 16:37:08,898 botocore.credentials INFO Found credentials in shared credentials file: ~/.aws/credentials
+2026-07-15 16:37:11,051 root INFO 
+Volume Data: 
+[{'volume_id': 'vol-0957b168066466a97', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 1700, 'iops': 3000, 'throughput': 400, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-07a59ace84cf801b7', 'volume_name': 'REG10WEB09HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0032ad1b61641e8db', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0ab51a45b5ac55660', 'volume_name': 'REG10ESS01HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 559, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea1383f262e3d0ca', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0f03645d1afaca0ab', 'volume_name': 'REG10APP19HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 51, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ee87391f85885377', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0de1045c0747b5a39', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sde', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0afbe5a036295e515', 'volume_name': 'REG10APP19HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 101, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ee87391f85885377', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-012c5cb6d11edae22', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 8, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sdd', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0cbe0ede99b2e072a', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 75, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0feea028e3138870a', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 125, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-05c7ff6d6099cf507', 'volume_name': 'REG10WEB08HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0cd042d726bf0a38e', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-099e56ee17e05a2c5', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 200, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sdd', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-09d427abda139bc7c', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 75, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0e2870c83ef9262a0', 'volume_name': 'REG10ESS01HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 51, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea1383f262e3d0ca', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-04cf0f1abad91752d', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 10, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-094fd0fc635f84a80', 'volume_name': 'REG10APP19HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 101, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ee87391f85885377', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0225e8dcba4a6a016', 'volume_name': 'REG10WEB09HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0032ad1b61641e8db', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0daeab5e4d80fd2c3', 'volume_name': 'REG10ESS01HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 230, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea1383f262e3d0ca', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-034df25996c759873', 'volume_name': 'REG10WEB08HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0cd042d726bf0a38e', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0e8bdab3ac57ad2d6', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 1900, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdd', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-04632d22220164486', 'volume_name': 'REG10WEB09HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0032ad1b61641e8db', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-045fcbdc20d587ad8', 'volume_name': 'REG10WEB08HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0cd042d726bf0a38e', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-05ed2eb1a693650b2', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-08398856cf00d2aa7', 'volume_name': 'REG10WEB91HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 100, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0ea6a5e2c951f1710', 'device': '/dev/sda1', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0bdf19649490f3b90', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 990, 'iops': 3050, 'throughput': 400, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdc', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-07d1711003f1076f5', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 200, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sde', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-02b9d2db251d852c1', 'volume_name': 'REG10APP07HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 50, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-0e0dba94856924013', 'device': '/dev/sdb', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}, {'volume_id': 'vol-0ff4842f8e42e4d9d', 'volume_name': 'REG10DBS37HYP', 'type': 'gp3', 'az': 'eu-west-1b', 'size': 270, 'iops': 3000, 'throughput': 125, 'instance_id': 'i-080f4d2599e128f7c', 'device': '/dev/sdf', 'encrypted': True, 'kms_key': 'arn:aws:kms:eu-west-1:312844855060:key/e8dc7840-9ef0-4265-bf0a-9d124d822264'}] 
+2026-07-15 16:37:11,246 root INFO 
+Running instances:
+['i-080f4d2599e128f7c', 'i-0cd042d726bf0a38e', 'i-0ea1383f262e3d0ca', 'i-0ee87391f85885377', 'i-0e0dba94856924013', 'i-0ea6a5e2c951f1710', 'i-0032ad1b61641e8db'] 
+2026-07-15 16:37:11,247 root INFO 
+Migration plan:
+2026-07-15 16:37:11,247 root INFO vol-0957b168066466a97 on i-080f4d2599e128f7c as /dev/sdb
+2026-07-15 16:37:11,248 root INFO vol-07a59ace84cf801b7 on i-0032ad1b61641e8db as /dev/sdc
+2026-07-15 16:37:11,249 root INFO vol-0ab51a45b5ac55660 on i-0ea1383f262e3d0ca as /dev/sdb
+2026-07-15 16:37:11,249 root INFO vol-0f03645d1afaca0ab on i-0ee87391f85885377 as /dev/sdc
+2026-07-15 16:37:11,250 root INFO vol-0de1045c0747b5a39 on i-0ea6a5e2c951f1710 as /dev/sde
+2026-07-15 16:37:11,250 root INFO vol-0afbe5a036295e515 on i-0ee87391f85885377 as /dev/sdb
+2026-07-15 16:37:11,251 root INFO vol-012c5cb6d11edae22 on i-0ea6a5e2c951f1710 as /dev/sdd
+2026-07-15 16:37:11,251 root INFO vol-0cbe0ede99b2e072a on i-0ea6a5e2c951f1710 as /dev/sdb
+2026-07-15 16:37:11,251 root INFO vol-0feea028e3138870a on i-080f4d2599e128f7c as /dev/sda1
+2026-07-15 16:37:11,251 root INFO vol-05c7ff6d6099cf507 on i-0cd042d726bf0a38e as /dev/sdc
+2026-07-15 16:37:11,252 root INFO vol-099e56ee17e05a2c5 on i-0e0dba94856924013 as /dev/sdd
+2026-07-15 16:37:11,252 root INFO vol-09d427abda139bc7c on i-0e0dba94856924013 as /dev/sda1
+2026-07-15 16:37:11,253 root INFO vol-0e2870c83ef9262a0 on i-0ea1383f262e3d0ca as /dev/sda1
+2026-07-15 16:37:11,253 root INFO vol-04cf0f1abad91752d on i-0ea6a5e2c951f1710 as /dev/sdc
+2026-07-15 16:37:11,253 root INFO vol-094fd0fc635f84a80 on i-0ee87391f85885377 as /dev/sda1
+2026-07-15 16:37:11,254 root INFO vol-0225e8dcba4a6a016 on i-0032ad1b61641e8db as /dev/sda1
+2026-07-15 16:37:11,254 root INFO vol-0daeab5e4d80fd2c3 on i-0ea1383f262e3d0ca as /dev/sdc
+2026-07-15 16:37:11,255 root INFO vol-034df25996c759873 on i-0cd042d726bf0a38e as /dev/sda1
+2026-07-15 16:37:11,255 root INFO vol-0e8bdab3ac57ad2d6 on i-080f4d2599e128f7c as /dev/sdd
+2026-07-15 16:37:11,256 root INFO vol-04632d22220164486 on i-0032ad1b61641e8db as /dev/sdb
+2026-07-15 16:37:11,256 root INFO vol-045fcbdc20d587ad8 on i-0cd042d726bf0a38e as /dev/sdb
+2026-07-15 16:37:11,257 root INFO vol-05ed2eb1a693650b2 on i-0e0dba94856924013 as /dev/sdc
+2026-07-15 16:37:11,257 root INFO vol-08398856cf00d2aa7 on i-0ea6a5e2c951f1710 as /dev/sda1
+2026-07-15 16:37:11,258 root INFO vol-0bdf19649490f3b90 on i-080f4d2599e128f7c as /dev/sdc
+2026-07-15 16:37:11,258 root INFO vol-07d1711003f1076f5 on i-080f4d2599e128f7c as /dev/sde
+2026-07-15 16:37:11,259 root INFO vol-02b9d2db251d852c1 on i-0e0dba94856924013 as /dev/sdb
+2026-07-15 16:37:11,259 root INFO vol-0ff4842f8e42e4d9d on i-080f4d2599e128f7c as /dev/sdf
+2026-07-15 16:37:11,260 root INFO 
+Instances to stop: 
+['i-080f4d2599e128f7c', 'i-0cd042d726bf0a38e', 'i-0ea1383f262e3d0ca', 'i-0ee87391f85885377', 'i-0e0dba94856924013', 'i-0ea6a5e2c951f1710', 'i-0032ad1b61641e8db']
+2026-07-15 16:37:11,260 root INFO 
+Target KMS key: arn:aws:kms:eu-west-1:312844855060:key/7bad6a5d-ae37-4d5d-b1ab-b7581a7ae487
+2026-07-15 16:37:11,261 root INFO 
+7 instances targeted in the VPC vpc-0463c76b898aa20b1
+2026-07-15 16:37:11,262 root INFO 
+27 volumes require migration
+2026-07-15 16:37:11,262 root INFO 
+Stopping instances... 
+2026-07-15 16:38:28,520 root INFO 
+Instances Stopped 
+2026-07-15 16:38:28,561 botocore.credentials INFO Found credentials in shared credentials file: ~/.aws/credentials
+2026-07-15 16:38:30,344 root INFO 
+Started snapshot snap-0c14834fd3ab92f8b for volume vol-0957b168066466a97 
+2026-07-15 16:38:30,803 root INFO 
+Started snapshot snap-07c890ba22a83fa08 for volume vol-07a59ace84cf801b7 
+2026-07-15 16:38:31,181 root INFO 
+Started snapshot snap-0a53a4a3ebfc7066b for volume vol-0ab51a45b5ac55660 
+2026-07-15 16:38:31,573 root INFO 
+Started snapshot snap-006e59b8c734d5ae5 for volume vol-0f03645d1afaca0ab 
+2026-07-15 16:38:31,992 root INFO 
+Started snapshot snap-003938aead71e0569 for volume vol-0de1045c0747b5a39 
+2026-07-15 16:38:32,447 root INFO 
+Started snapshot snap-0f9453b2707bbdcc1 for volume vol-0afbe5a036295e515 
+2026-07-15 16:38:32,825 root INFO 
+Started snapshot snap-011c82799f5b808ab for volume vol-012c5cb6d11edae22 
+2026-07-15 16:38:33,212 root INFO 
+Started snapshot snap-0fb5a8c8670261199 for volume vol-0cbe0ede99b2e072a 
+2026-07-15 16:38:33,642 root INFO 
+Started snapshot snap-01d6ae77ede77732e for volume vol-0feea028e3138870a 
+2026-07-15 16:38:34,015 root INFO 
+Started snapshot snap-0e6d95d8420112525 for volume vol-05c7ff6d6099cf507 
+2026-07-15 16:38:34,469 root INFO 
+Started snapshot snap-01dc6f92f1c2434c1 for volume vol-099e56ee17e05a2c5 
+2026-07-15 16:38:35,031 root INFO 
+Started snapshot snap-0b39265d97984b5a2 for volume vol-09d427abda139bc7c 
+2026-07-15 16:38:35,398 root INFO 
+Started snapshot snap-051a14948e5319687 for volume vol-0e2870c83ef9262a0 
+2026-07-15 16:38:35,761 root INFO 
+Started snapshot snap-08d29e970960b5706 for volume vol-04cf0f1abad91752d 
+2026-07-15 16:38:36,131 root INFO 
+Started snapshot snap-003cdc4bf07f95611 for volume vol-094fd0fc635f84a80 
+2026-07-15 16:38:36,565 root INFO 
+Started snapshot snap-0e636e93542f24eaf for volume vol-0225e8dcba4a6a016 
+2026-07-15 16:38:37,001 root INFO 
+Started snapshot snap-0bdb7adbf0a11bb45 for volume vol-0daeab5e4d80fd2c3 
+2026-07-15 16:38:37,361 root INFO 
+Started snapshot snap-0c7b69252c565c653 for volume vol-034df25996c759873 
+2026-07-15 16:38:37,776 root INFO 
+Started snapshot snap-01d78f7c45c040521 for volume vol-0e8bdab3ac57ad2d6 
+2026-07-15 16:38:38,137 root INFO 
+Started snapshot snap-03098c1c78e9d6115 for volume vol-04632d22220164486 
+2026-07-15 16:38:38,519 root INFO 
+Started snapshot snap-05bcd081a7bbd2da9 for volume vol-045fcbdc20d587ad8 
+2026-07-15 16:38:38,917 root INFO 
+Started snapshot snap-07cf3b87d9ff2d3a5 for volume vol-05ed2eb1a693650b2 
+2026-07-15 16:38:39,319 root INFO 
+Started snapshot snap-0f9cb9eb91576c397 for volume vol-08398856cf00d2aa7 
+2026-07-15 16:38:40,016 root INFO 
+Started snapshot snap-0300e0b2ac6b84d37 for volume vol-0bdf19649490f3b90 
+2026-07-15 16:38:40,432 root INFO 
+Started snapshot snap-0c356fe191ac940bc for volume vol-07d1711003f1076f5 
+2026-07-15 16:38:40,821 root INFO 
+Started snapshot snap-00e17eb1268378f3c for volume vol-02b9d2db251d852c1 
+2026-07-15 16:38:41,232 root INFO 
+Started snapshot snap-09f15a77ea3a66502 for volume vol-0ff4842f8e42e4d9d 
+2026-07-15 16:38:41,232 root INFO 
+Waiting for snapshots to complete:
+['snap-0c14834fd3ab92f8b', 'snap-07c890ba22a83fa08', 'snap-0a53a4a3ebfc7066b', 'snap-006e59b8c734d5ae5', 'snap-003938aead71e0569', 'snap-0f9453b2707bbdcc1', 'snap-011c82799f5b808ab', 'snap-0fb5a8c8670261199', 'snap-01d6ae77ede77732e', 'snap-0e6d95d8420112525', 'snap-01dc6f92f1c2434c1', 'snap-0b39265d97984b5a2', 'snap-051a14948e5319687', 'snap-08d29e970960b5706', 'snap-003cdc4bf07f95611', 'snap-0e636e93542f24eaf', 'snap-0bdb7adbf0a11bb45', 'snap-0c7b69252c565c653', 'snap-01d78f7c45c040521', 'snap-03098c1c78e9d6115', 'snap-05bcd081a7bbd2da9', 'snap-07cf3b87d9ff2d3a5', 'snap-0f9cb9eb91576c397', 'snap-0300e0b2ac6b84d37', 'snap-0c356fe191ac940bc', 'snap-00e17eb1268378f3c', 'snap-09f15a77ea3a66502'] 
+2026-07-15 16:44:15,153 root INFO 
+All snapshots completed. 
+2026-07-15 16:44:15,154 root INFO 
+Creating new volumes from snapshots... 
+2026-07-15 16:44:16,235 root INFO 
+Created new volume vol-0269c5cab71b353b1 from snapshot snap-0c14834fd3ab92f8b 
+2026-07-15 16:44:16,541 root INFO 
+Created new volume vol-0a3cd94db8f717cdf from snapshot snap-07c890ba22a83fa08 
+2026-07-15 16:44:16,920 root INFO 
+Created new volume vol-0a4d30e6bce8e4aec from snapshot snap-0a53a4a3ebfc7066b 
+2026-07-15 16:44:17,248 root INFO 
+Created new volume vol-0c9ee2975619fdb0a from snapshot snap-006e59b8c734d5ae5 
+2026-07-15 16:44:17,573 root INFO 
+Created new volume vol-0b14beb1fdf76cc7d from snapshot snap-003938aead71e0569 
+2026-07-15 16:44:17,891 root INFO 
+Created new volume vol-0a9d77627c479ee44 from snapshot snap-0f9453b2707bbdcc1 
+2026-07-15 16:44:18,213 root INFO 
+Created new volume vol-047ccc309ea86be14 from snapshot snap-011c82799f5b808ab 
+2026-07-15 16:44:18,561 root INFO 
+Created new volume vol-06c418eb242348a6a from snapshot snap-0fb5a8c8670261199 
+2026-07-15 16:44:18,879 root INFO 
+Created new volume vol-01271b9c611e0dae2 from snapshot snap-01d6ae77ede77732e 
+2026-07-15 16:44:19,208 root INFO 
+Created new volume vol-0b1ea7534e7ed0db9 from snapshot snap-0e6d95d8420112525 
+2026-07-15 16:44:19,520 root INFO 
+Created new volume vol-053cda6054c20c203 from snapshot snap-01dc6f92f1c2434c1 
+2026-07-15 16:44:19,848 root INFO 
+Created new volume vol-03c35291b42784e49 from snapshot snap-0b39265d97984b5a2 
+2026-07-15 16:44:20,158 root INFO 
+Created new volume vol-02fc9ab6962fc590e from snapshot snap-051a14948e5319687 
+2026-07-15 16:44:20,470 root INFO 
+Created new volume vol-0e2d4a23b405cb638 from snapshot snap-08d29e970960b5706 
+2026-07-15 16:44:20,781 root INFO 
+Created new volume vol-0b227346d7fb576a5 from snapshot snap-003cdc4bf07f95611 
+2026-07-15 16:44:21,098 root INFO 
+Created new volume vol-0d670fd84592a32af from snapshot snap-0e636e93542f24eaf 
+2026-07-15 16:44:21,418 root INFO 
+Created new volume vol-07adad9421a1afd62 from snapshot snap-0bdb7adbf0a11bb45 
+2026-07-15 16:44:21,723 root INFO 
+Created new volume vol-07a2e67d27a6b8466 from snapshot snap-0c7b69252c565c653 
+2026-07-15 16:44:22,047 root INFO 
+Created new volume vol-0a0d54f27b662e465 from snapshot snap-01d78f7c45c040521 
+2026-07-15 16:44:22,352 root INFO 
+Created new volume vol-0081e9aaa888a3f39 from snapshot snap-03098c1c78e9d6115 
+2026-07-15 16:44:22,686 root INFO 
+Created new volume vol-0fc4f4f928de16035 from snapshot snap-05bcd081a7bbd2da9 
+2026-07-15 16:44:23,060 root INFO 
+Created new volume vol-042bf9f4b8ef75d14 from snapshot snap-07cf3b87d9ff2d3a5 
+2026-07-15 16:44:23,410 root INFO 
+Created new volume vol-07e88f873d40ce4e3 from snapshot snap-0f9cb9eb91576c397 
+2026-07-15 16:44:23,726 root INFO 
+Created new volume vol-0ca41809f48049fd3 from snapshot snap-0300e0b2ac6b84d37 
+2026-07-15 16:44:24,030 root INFO 
+Created new volume vol-0ccb4b708ae914f3d from snapshot snap-0c356fe191ac940bc 
+2026-07-15 16:44:24,337 root INFO 
+Created new volume vol-047dbf354b8cc60d6 from snapshot snap-00e17eb1268378f3c 
+2026-07-15 16:44:24,676 root INFO 
+Created new volume vol-0f276614fb1a00a30 from snapshot snap-09f15a77ea3a66502 
+2026-07-15 16:44:24,677 root INFO 
+Waiting for new volumes to be available:
+['vol-0269c5cab71b353b1', 'vol-0a3cd94db8f717cdf', 'vol-0a4d30e6bce8e4aec', 'vol-0c9ee2975619fdb0a', 'vol-0b14beb1fdf76cc7d', 'vol-0a9d77627c479ee44', 'vol-047ccc309ea86be14', 'vol-06c418eb242348a6a', 'vol-01271b9c611e0dae2', 'vol-0b1ea7534e7ed0db9', 'vol-053cda6054c20c203', 'vol-03c35291b42784e49', 'vol-02fc9ab6962fc590e', 'vol-0e2d4a23b405cb638', 'vol-0b227346d7fb576a5', 'vol-0d670fd84592a32af', 'vol-07adad9421a1afd62', 'vol-07a2e67d27a6b8466', 'vol-0a0d54f27b662e465', 'vol-0081e9aaa888a3f39', 'vol-0fc4f4f928de16035', 'vol-042bf9f4b8ef75d14', 'vol-07e88f873d40ce4e3', 'vol-0ca41809f48049fd3', 'vol-0ccb4b708ae914f3d', 'vol-047dbf354b8cc60d6', 'vol-0f276614fb1a00a30'] 
+2026-07-15 16:44:40,267 root INFO 
+All volumes are available. 
+2026-07-15 16:44:40,268 root INFO 
+Detaching old volumes 
+2026-07-15 16:44:40,611 root INFO 
+Detaching old volume vol-0957b168066466a97 from i-080f4d2599e128f7c as /dev/sdb 
+2026-07-15 16:44:40,956 root INFO 
+Detaching old volume vol-07a59ace84cf801b7 from i-0032ad1b61641e8db as /dev/sdc 
+2026-07-15 16:44:41,304 root INFO 
+Detaching old volume vol-0ab51a45b5ac55660 from i-0ea1383f262e3d0ca as /dev/sdb 
+2026-07-15 16:44:41,650 root INFO 
+Detaching old volume vol-0f03645d1afaca0ab from i-0ee87391f85885377 as /dev/sdc 
+2026-07-15 16:44:42,016 root INFO 
+Detaching old volume vol-0de1045c0747b5a39 from i-0ea6a5e2c951f1710 as /dev/sde 
+2026-07-15 16:44:42,330 root INFO 
+Detaching old volume vol-0afbe5a036295e515 from i-0ee87391f85885377 as /dev/sdb 
+2026-07-15 16:44:42,663 root INFO 
+Detaching old volume vol-012c5cb6d11edae22 from i-0ea6a5e2c951f1710 as /dev/sdd 
+2026-07-15 16:44:42,992 root INFO 
+Detaching old volume vol-0cbe0ede99b2e072a from i-0ea6a5e2c951f1710 as /dev/sdb 
+2026-07-15 16:44:43,387 root INFO 
+Detaching old volume vol-0feea028e3138870a from i-080f4d2599e128f7c as /dev/sda1 
+2026-07-15 16:44:43,718 root INFO 
+Detaching old volume vol-05c7ff6d6099cf507 from i-0cd042d726bf0a38e as /dev/sdc 
+2026-07-15 16:44:44,068 root INFO 
+Detaching old volume vol-099e56ee17e05a2c5 from i-0e0dba94856924013 as /dev/sdd 
+2026-07-15 16:44:44,434 root INFO 
+Detaching old volume vol-09d427abda139bc7c from i-0e0dba94856924013 as /dev/sda1 
+2026-07-15 16:44:44,793 root INFO 
+Detaching old volume vol-0e2870c83ef9262a0 from i-0ea1383f262e3d0ca as /dev/sda1 
+2026-07-15 16:44:45,113 root INFO 
+Detaching old volume vol-04cf0f1abad91752d from i-0ea6a5e2c951f1710 as /dev/sdc 
+2026-07-15 16:44:45,484 root INFO 
+Detaching old volume vol-094fd0fc635f84a80 from i-0ee87391f85885377 as /dev/sda1 
+2026-07-15 16:44:45,883 root INFO 
+Detaching old volume vol-0225e8dcba4a6a016 from i-0032ad1b61641e8db as /dev/sda1 
+2026-07-15 16:44:46,229 root INFO 
+Detaching old volume vol-0daeab5e4d80fd2c3 from i-0ea1383f262e3d0ca as /dev/sdc 
+2026-07-15 16:44:46,611 root INFO 
+Detaching old volume vol-034df25996c759873 from i-0cd042d726bf0a38e as /dev/sda1 
+2026-07-15 16:44:46,939 root INFO 
+Detaching old volume vol-0e8bdab3ac57ad2d6 from i-080f4d2599e128f7c as /dev/sdd 
+2026-07-15 16:44:47,256 root INFO 
+Detaching old volume vol-04632d22220164486 from i-0032ad1b61641e8db as /dev/sdb 
+2026-07-15 16:44:47,581 root INFO 
+Detaching old volume vol-045fcbdc20d587ad8 from i-0cd042d726bf0a38e as /dev/sdb 
+2026-07-15 16:44:47,892 root INFO 
+Detaching old volume vol-05ed2eb1a693650b2 from i-0e0dba94856924013 as /dev/sdc 
+2026-07-15 16:44:48,280 root INFO 
+Detaching old volume vol-08398856cf00d2aa7 from i-0ea6a5e2c951f1710 as /dev/sda1 
+2026-07-15 16:44:48,618 root INFO 
+Detaching old volume vol-0bdf19649490f3b90 from i-080f4d2599e128f7c as /dev/sdc 
+2026-07-15 16:44:48,964 root INFO 
+Detaching old volume vol-07d1711003f1076f5 from i-080f4d2599e128f7c as /dev/sde 
+2026-07-15 16:44:49,285 root INFO 
+Detaching old volume vol-02b9d2db251d852c1 from i-0e0dba94856924013 as /dev/sdb 
+2026-07-15 16:44:49,634 root INFO 
+Detaching old volume vol-0ff4842f8e42e4d9d from i-080f4d2599e128f7c as /dev/sdf 
+2026-07-15 16:44:49,635 root INFO 
+Waiting for old volumes to detach fully:
+['vol-0957b168066466a97', 'vol-07a59ace84cf801b7', 'vol-0ab51a45b5ac55660', 'vol-0f03645d1afaca0ab', 'vol-0de1045c0747b5a39', 'vol-0afbe5a036295e515', 'vol-012c5cb6d11edae22', 'vol-0cbe0ede99b2e072a', 'vol-0feea028e3138870a', 'vol-05c7ff6d6099cf507', 'vol-099e56ee17e05a2c5', 'vol-09d427abda139bc7c', 'vol-0e2870c83ef9262a0', 'vol-04cf0f1abad91752d', 'vol-094fd0fc635f84a80', 'vol-0225e8dcba4a6a016', 'vol-0daeab5e4d80fd2c3', 'vol-034df25996c759873', 'vol-0e8bdab3ac57ad2d6', 'vol-04632d22220164486', 'vol-045fcbdc20d587ad8', 'vol-05ed2eb1a693650b2', 'vol-08398856cf00d2aa7', 'vol-0bdf19649490f3b90', 'vol-07d1711003f1076f5', 'vol-02b9d2db251d852c1', 'vol-0ff4842f8e42e4d9d'] 
+2026-07-15 16:44:49,807 root INFO 
+Old volumes are detached. 
+2026-07-15 16:44:49,807 root INFO 
+Attaching new volumes. 
+2026-07-15 16:44:50,208 root INFO 
+Attaching new volume vol-0269c5cab71b353b1 to i-080f4d2599e128f7c as /dev/sdb 
+2026-07-15 16:44:50,621 root INFO 
+Attaching new volume vol-0a3cd94db8f717cdf to i-0032ad1b61641e8db as /dev/sdc 
+2026-07-15 16:44:51,055 root INFO 
+Attaching new volume vol-0a4d30e6bce8e4aec to i-0ea1383f262e3d0ca as /dev/sdb 
+2026-07-15 16:44:51,461 root INFO 
+Attaching new volume vol-0c9ee2975619fdb0a to i-0ee87391f85885377 as /dev/sdc 
+2026-07-15 16:44:51,902 root INFO 
+Attaching new volume vol-0b14beb1fdf76cc7d to i-0ea6a5e2c951f1710 as /dev/sde 
+2026-07-15 16:44:52,296 root INFO 
+Attaching new volume vol-0a9d77627c479ee44 to i-0ee87391f85885377 as /dev/sdb 
+2026-07-15 16:44:52,700 root INFO 
+Attaching new volume vol-047ccc309ea86be14 to i-0ea6a5e2c951f1710 as /dev/sdd 
+2026-07-15 16:44:53,117 root INFO 
+Attaching new volume vol-06c418eb242348a6a to i-0ea6a5e2c951f1710 as /dev/sdb 
+2026-07-15 16:44:53,573 root INFO 
+Attaching new volume vol-01271b9c611e0dae2 to i-080f4d2599e128f7c as /dev/sda1 
+2026-07-15 16:44:53,974 root INFO 
+Attaching new volume vol-0b1ea7534e7ed0db9 to i-0cd042d726bf0a38e as /dev/sdc 
+2026-07-15 16:44:54,430 root INFO 
+Attaching new volume vol-053cda6054c20c203 to i-0e0dba94856924013 as /dev/sdd 
+2026-07-15 16:44:54,894 root INFO 
+Attaching new volume vol-03c35291b42784e49 to i-0e0dba94856924013 as /dev/sda1 
+2026-07-15 16:44:55,317 root INFO 
+Attaching new volume vol-02fc9ab6962fc590e to i-0ea1383f262e3d0ca as /dev/sda1 
+2026-07-15 16:44:55,750 root INFO 
+Attaching new volume vol-0e2d4a23b405cb638 to i-0ea6a5e2c951f1710 as /dev/sdc 
+2026-07-15 16:44:56,394 root INFO 
+Attaching new volume vol-0b227346d7fb576a5 to i-0ee87391f85885377 as /dev/sda1 
+2026-07-15 16:44:56,833 root INFO 
+Attaching new volume vol-0d670fd84592a32af to i-0032ad1b61641e8db as /dev/sda1 
+2026-07-15 16:44:57,266 root INFO 
+Attaching new volume vol-07adad9421a1afd62 to i-0ea1383f262e3d0ca as /dev/sdc 
+2026-07-15 16:44:57,693 root INFO 
+Attaching new volume vol-07a2e67d27a6b8466 to i-0cd042d726bf0a38e as /dev/sda1 
+2026-07-15 16:44:58,147 root INFO 
+Attaching new volume vol-0a0d54f27b662e465 to i-080f4d2599e128f7c as /dev/sdd 
+2026-07-15 16:44:58,577 root INFO 
+Attaching new volume vol-0081e9aaa888a3f39 to i-0032ad1b61641e8db as /dev/sdb 
+2026-07-15 16:44:59,016 root INFO 
+Attaching new volume vol-0fc4f4f928de16035 to i-0cd042d726bf0a38e as /dev/sdb 
+2026-07-15 16:44:59,405 root INFO 
+Attaching new volume vol-042bf9f4b8ef75d14 to i-0e0dba94856924013 as /dev/sdc 
+2026-07-15 16:44:59,838 root INFO 
+Attaching new volume vol-07e88f873d40ce4e3 to i-0ea6a5e2c951f1710 as /dev/sda1 
+2026-07-15 16:45:00,294 root INFO 
+Attaching new volume vol-0ca41809f48049fd3 to i-080f4d2599e128f7c as /dev/sdc 
+2026-07-15 16:45:00,727 root INFO 
+Attaching new volume vol-0ccb4b708ae914f3d to i-080f4d2599e128f7c as /dev/sde 
+2026-07-15 16:45:01,153 root INFO 
+Attaching new volume vol-047dbf354b8cc60d6 to i-0e0dba94856924013 as /dev/sdb 
+2026-07-15 16:45:01,660 root INFO 
+Attaching new volume vol-0f276614fb1a00a30 to i-080f4d2599e128f7c as /dev/sdf 
+2026-07-15 16:45:01,662 root INFO 
+Waiting for new volumes to attach fully:
+['vol-0269c5cab71b353b1', 'vol-0a3cd94db8f717cdf', 'vol-0a4d30e6bce8e4aec', 'vol-0c9ee2975619fdb0a', 'vol-0b14beb1fdf76cc7d', 'vol-0a9d77627c479ee44', 'vol-047ccc309ea86be14', 'vol-06c418eb242348a6a', 'vol-01271b9c611e0dae2', 'vol-0b1ea7534e7ed0db9', 'vol-053cda6054c20c203', 'vol-03c35291b42784e49', 'vol-02fc9ab6962fc590e', 'vol-0e2d4a23b405cb638', 'vol-0b227346d7fb576a5', 'vol-0d670fd84592a32af', 'vol-07adad9421a1afd62', 'vol-07a2e67d27a6b8466', 'vol-0a0d54f27b662e465', 'vol-0081e9aaa888a3f39', 'vol-0fc4f4f928de16035', 'vol-042bf9f4b8ef75d14', 'vol-07e88f873d40ce4e3', 'vol-0ca41809f48049fd3', 'vol-0ccb4b708ae914f3d', 'vol-047dbf354b8cc60d6', 'vol-0f276614fb1a00a30'] 
+2026-07-15 16:45:01,917 root INFO 
+New volumes are attached. 
+2026-07-15 16:45:01,918 root INFO 
+Starting instances... 
+2026-07-15 16:45:19,418 root INFO 
+Instances Running 

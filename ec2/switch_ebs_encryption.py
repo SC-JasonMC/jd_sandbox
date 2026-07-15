@@ -1,5 +1,7 @@
+import os
 import boto3
 import argparse
+import logging
 
 class GlobalData:
     def __init__(self, region_name, profile_name):
@@ -25,7 +27,7 @@ class Volume(GlobalData):
     def __init__(self, region_name, profile_name):
         super().__init__(region_name, profile_name)
 
-    def get_volume_data(self):
+    def get_volume_data(self, vpc_instances):
             # Prepare to collect volume data
             volume_data = []
             ec2_volumes = self.describe_volumes()
@@ -46,27 +48,30 @@ class Volume(GlobalData):
                 attachment_device = attachment_info.get('Device', 'N/A')
                 volume_tags = volume.get('Tags', 'N/A')
 
+                for vpc_instance in vpc_instances:
+                    if attached_instance_id == vpc_instance:
 
-                # Append collected data to the volume_data list
-                volume_data.append({
-                    "volume_id": volume_id,
-                    "volume_name": volume_name,
-                    "type": volume_type,
-                    "az": volume_az,
-                    "size": volume_size,
-                    "iops": volume_iops,
-                    "throughput": volume_throughput,
-                    "instance_id": attached_instance_id,
-                    "device": attachment_device,
-                    "encrypted": volume_encrypted,
-                    "kms_key": kms_key
-                })
+
+                        # Append collected data to the volume_data list
+                        volume_data.append({
+                            "volume_id": volume_id,
+                            "volume_name": volume_name,
+                            "type": volume_type,
+                            "az": volume_az,
+                            "size": volume_size,
+                            "iops": volume_iops,
+                            "throughput": volume_throughput,
+                            "instance_id": attached_instance_id,
+                            "device": attachment_device,
+                            "encrypted": volume_encrypted,
+                            "kms_key": kms_key
+                        })
 
             # Return the volume data for external handling
             return volume_data
     
     def create_volumes(self, snapshot_data, kms_key_id):
-        print("\nCreating new volumes from snapshots... ")
+        log_print("\nCreating new volumes from snapshots... ")
 
         new_volume_data = []
 
@@ -125,7 +130,7 @@ class Volume(GlobalData):
                 "type": snapshot["type"],
             })
 
-            print(f"\nCreated new volume {new_volume_id} from snapshot {snapshot['snapshot_id']} ")
+            log_print(f"\nCreated new volume {new_volume_id} from snapshot {snapshot['snapshot_id']} ")
 
         return new_volume_data
         
@@ -133,20 +138,20 @@ class Volume(GlobalData):
         volume_ids = [volume["new_volume_id"] for volume in new_volume_data]
 
         if not volume_ids:
-            print("\nNo volumes to wait for. ")
+            log_print("\nNo volumes to wait for. ")
             return
 
-        print(f"\nWaiting for new volumes to be available:\n{volume_ids} ")
+        log_print(f"\nWaiting for new volumes to be available:\n{volume_ids} ")
 
         waiter = self.ec2.get_waiter("volume_available")
         waiter.wait(
             VolumeIds=volume_ids
         )
 
-        print(f"\nAll volumes are available. ")
+        log_print(f"\nAll volumes are available. ")
 
     def detach_old_volumes(self, volume_list):
-        print(f"\nDetaching old volumes ")
+        log_print(f"\nDetaching old volumes ")
 
         detached_volume_data = []
 
@@ -159,7 +164,7 @@ class Volume(GlobalData):
 
             detached_volume_data.append(volume)
 
-            print(f"\nDetaching old volume {volume['volume_id']} from {volume['instance_id']} as {volume['device']} ")
+            log_print(f"\nDetaching old volume {volume['volume_id']} from {volume['instance_id']} as {volume['device']} ")
 
         return detached_volume_data
 
@@ -167,20 +172,20 @@ class Volume(GlobalData):
         volume_ids = [volume['volume_id'] for volume in volume_list]
 
         if not volume_ids:
-            print("\nNo volumes to wait for. ")
+            log_print("\nNo volumes to wait for. ")
             return
         
-        print(f"\nWaiting for old volumes to detach fully:\n{volume_ids} ")
+        log_print(f"\nWaiting for old volumes to detach fully:\n{volume_ids} ")
 
         waiter = self.ec2.get_waiter("volume_available")
         waiter.wait(
             VolumeIds=volume_ids
         )
         
-        print("\nOld volumes are detached. ")
+        log_print("\nOld volumes are detached. ")
 
     def attach_new_volumes(self, new_volume_list):
-        print(f"\nAttaching new volumes. ")
+        log_print(f"\nAttaching new volumes. ")
 
         attached_volume_data = []
 
@@ -193,8 +198,7 @@ class Volume(GlobalData):
 
             attached_volume_data.append(volume)
 
-            print(
-                f"\nAttaching new volume {volume['new_volume_id']} to {volume['instance_id']} as {volume['device']} ")
+            log_print(f"\nAttaching new volume {volume['new_volume_id']} to {volume['instance_id']} as {volume['device']} ")
 
         return attached_volume_data
     
@@ -202,23 +206,43 @@ class Volume(GlobalData):
         volume_ids = [volume["new_volume_id"] for volume in new_volume_list]
 
         if not volume_ids:
-            print("\nNo volumes to wait for. ")
+            log_print("\nNo volumes to wait for. ")
             return
 
-        print(f"\nWaiting for new volumes to attach fully:\n{volume_ids} ")
+        log_print(f"\nWaiting for new volumes to attach fully:\n{volume_ids} ")
 
         waiter = self.ec2.get_waiter("volume_in_use")
         waiter.wait(
             VolumeIds=volume_ids
         )
 
-        print("\nNew volumes are attached. ")
+        log_print("\nNew volumes are attached. ")
                 
     
 class Instance(GlobalData):
     def __init__(self, region_name, profile_name):
         super().__init__(region_name, profile_name)
         self.instances = self.ec2.describe_instances()['Reservations']
+
+    def get_vpc_instances(self, vpc_id):
+
+        vpc_instance_response = self.ec2.describe_instances(
+            Filters=[
+                {
+                    'Name': 'vpc-id',
+                    'Values': [vpc_id]
+                }
+            ]
+        )
+
+        vpc_instances = []
+
+        for reservation in vpc_instance_response['Reservations']:
+            for instance in reservation['Instances']:
+                vpc_instances.append(instance['InstanceId'])
+
+        return vpc_instances
+
 
     def get_running_instances(self, instance_ids):
         if not instance_ids:
@@ -244,10 +268,10 @@ class Instance(GlobalData):
     
     def stop_instances(self, running_instances):
         if not running_instances:
-            print(f"\nNo running instances to stop. ")
+            log_print(f"\nNo running instances to stop. ")
             return None
         
-        print(f"\nStopping instances... ")
+        log_print(f"\nStopping instances... ")
         response = self.ec2.stop_instances(
             InstanceIds=running_instances,
             Hibernate=False,
@@ -259,19 +283,19 @@ class Instance(GlobalData):
         try:
             waiter = self.ec2.get_waiter('instance_stopped')
             waiter.wait(InstanceIds=running_instances)
-            print(f"\nInstances Stopped ")
+            log_print(f"\nInstances Stopped ")
         except Exception as e:
-            print(f"\nFailed waiting for instances to stop: {e} ")
+            log_print(f"\nFailed waiting for instances to stop: {e} ")
             raise
 
         return response
     
     def start_instances(self, running_instances):
         if not running_instances:
-            print(f"\nNo instances to start. ")
+            log_print(f"\nNo instances to start. ")
             return None
         
-        print(f"\nStarting instances... ")
+        log_print(f"\nStarting instances... ")
         response = self.ec2.start_instances(
             InstanceIds=running_instances,
         )
@@ -279,9 +303,9 @@ class Instance(GlobalData):
         try:
             waiter = self.ec2.get_waiter('instance_running')
             waiter.wait(InstanceIds=running_instances)
-            print(f"\nInstances Running ")
+            log_print(f"\nInstances Running ")
         except Exception as e:
-            print(f"\nFailed waiting for instances to start: {e} ")
+            log_print(f"\nFailed waiting for instances to start: {e} ")
             raise
 
         return response
@@ -337,7 +361,7 @@ class Snapshot(GlobalData):
                 "throughput": volume["throughput"],
             })
 
-            print(f"\nStarted snapshot {snapshot_id} for volume {volume_id} ")
+            log_print(f"\nStarted snapshot {snapshot_id} for volume {volume_id} ")
 
         return snapshot_data
 
@@ -345,60 +369,104 @@ class Snapshot(GlobalData):
         snapshot_ids = [snap["snapshot_id"] for snap in snapshot_data]
 
         if not snapshot_ids:
-            print("\nNo snapshots to wait for. ")
+            log_print("\nNo snapshots to wait for. ")
             return
 
-        print(f"\nWaiting for snapshots to complete:\n{snapshot_ids} ")
+        log_print(f"\nWaiting for snapshots to complete:\n{snapshot_ids} ")
 
         waiter = self.ec2.get_waiter("snapshot_completed")
         waiter.wait(
             SnapshotIds=snapshot_ids
         )
 
-        print("\nAll snapshots completed. ")
-    
+        log_print("\nAll snapshots completed. ")
+
+def log_print(message):
+    print(message)
+    logging.info(message)
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--profile_name")
     parser.add_argument("-r", "--region_name")
+    parser.add_argument("-v", "--vpc_id")
     parser.add_argument("-k", "--kms_key_id")
     parser.add_argument("--dry-run", action="store_true")
     
 
     args = parser.parse_args()
 
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    output_path = os.path.join(dir_path, 'log')
+    if not os.path.isdir(output_path):
+        os.mkdir(output_path)
+    filename_parts = [args.profile_name, "log"]
+    filename = "_".join(filename_parts)
+    logfile_path = os.path.join(output_path, filename)
+
+    logging.basicConfig(filename=logfile_path,
+        filemode='a',
+        format='%(asctime)s,%(msecs)03d %(name)s %(levelname)s %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S',
+        level=logging.INFO)
+    
     volume = Volume(
         region_name=args.region_name,
         profile_name=args.profile_name,
     )
-
-    raw_volume_list = volume.get_volume_data()
-
-    for raw_volume in raw_volume_list:
-        if raw_volume["kms_key"] == args.kms_key_id:
-            print(f"\nSkipping {raw_volume['volume_id']} because it already uses the target KMS key ")
-
-    volume_list = [v for v in raw_volume_list if v['kms_key'] != args.kms_key_id]
-
-    if not volume_list:
-        print("\nAll in-use volumes already use the target KMS key. Exiting. ")
-        return
-    else:
-        print(f"\nVolume Data: \n{volume_list} ")
-
-    # Get unique instance IDs from volume list
-    instance_list = list(dict.fromkeys(vol['instance_id'] for vol in volume_list))
 
     instance = Instance(
         region_name=args.region_name,
         profile_name=args.profile_name
     )
 
+    vpc_instances = instance.get_vpc_instances(vpc_id=args.vpc_id)
+
+
+    raw_volume_list = volume.get_volume_data(vpc_instances)
+
+    for raw_volume in raw_volume_list:
+        if raw_volume["kms_key"] == args.kms_key_id:
+            log_print(f"\nSkipping {raw_volume['volume_id']} because it already uses the target KMS key ")
+
+    volume_list = [v for v in raw_volume_list if v['kms_key'] != args.kms_key_id]
+
+    if not volume_list:
+        log_print("\nAll in-use volumes already use the target KMS key. Exiting. ")
+        return
+    else:
+        log_print(f"\nVolume Data: \n{volume_list} ")
+
+    instance_list = list(dict.fromkeys(vol['instance_id'] for vol in volume_list))
+
     running_instances = instance.get_running_instances(instance_list)
-    print(f"\nRunning instances:\n{running_instances} ")
+    log_print(f"\nRunning instances:\n{running_instances} ")
 
     # response = instance.stop_instances(running_instances)
+
+    # log_print("\nVolume replacement plan:")
+    # for vol in new_volume_list:
+    #     log_print(f"\n{vol['old_volume_id']} -> {vol['new_volume_id']} on {vol['instance_id']} as {vol['device']} ")
+
+    log_print("\nMigration plan:")
+    for vol in volume_list:
+        log_print(
+            f"{vol['volume_id']} "
+            f"on {vol['instance_id']} "
+            f"as {vol['device']}"
+        )
+
+    log_print(f"\nInstances to stop: \n{running_instances}")
+
+    log_print(f"\nTarget KMS key: {args.kms_key_id}")
+
+    log_print(f"\n{len(vpc_instances)} instances targeted in the VPC {args.vpc_id}")
+
+    log_print(f"\n{len(volume_list)} volumes require migration")
+
+    if args.dry_run:
+        log_print("\nDry run enabled. Not stopping instances or modifying volumes. ")
+        return
 
     if running_instances:
         instance.stop_instances(running_instances)
@@ -412,23 +480,12 @@ def main():
 
     snapshot.wait_for_snapshots(snapshot_list)
 
-    new_volume_list = volume.create_volumes(
-        snapshot_data=snapshot_list,
-        kms_key_id=args.kms_key_id
-    )
+    new_volume_list = volume.create_volumes(snapshot_data=snapshot_list, kms_key_id=args.kms_key_id)
 
     volume.wait_for_new_volumes(new_volume_list)
 
     if len(new_volume_list) != len(volume_list):
         raise RuntimeError("New volume count does not match old volume count. Aborting detach.")
-    
-    print("\nVolume replacement plan:")
-    for vol in new_volume_list:
-        print(f"\n{vol['old_volume_id']} -> {vol['new_volume_id']} on {vol['instance_id']} as {vol['device']} ")
-
-    if args.dry_run:
-        print("\nDry run enabled. Not stopping instances or modifying volumes. ")
-        return
 
     detached_old_volumes = volume.detach_old_volumes(volume_list)
 
